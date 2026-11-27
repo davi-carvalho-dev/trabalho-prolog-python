@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MECAUTO</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+
+  <main>
+    <div class="container text-center">
+      <h1 class="text-center mt-4">Bem-vindo!</h1>
+      <p class="text-center">Seu carro está com algum problema? Conte os sintomas e o sistema indica as causas mais prováveis.</p>
+      <button id="btn-iniciar" class="btn-solid theme-primary mt-5">Iniciar diagnóstico</button>
+    </div>
+  </main>
+
+  <section id="diagnostico" class="etapas" hidden>
+    <div class="container">
+
+      
+        <div id="etapa-modelo">
+          <h2>Qual é o modelo do carro?</h2>
+          <label for="modelo">Informe o modelo, a motorização e o ano</label>
+          <input type="text" id="modelo" placeholder="Ex.: Gol 1.0, 2015">
+          <button id="btn-proximo" class="btn-solid theme-primary mt-3">Próximo</button>
+        </div>
+
+      <div id="etapa-problemas" hidden>
+        <h2>Selecione o problema apresentado</h2>
+
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="problema" value="ignicao"> Sistema de partida e Ignição</label>
+          <label class="opcao"><input type="radio" name="problema" value="arrefecimento"> Arrefecimento e Superaquecimento</label>
+          <label class="opcao"><input type="radio" name="problema" value="freios"> Sistema de freios e Segurança</label>
+        </div>
+
+        <div class="botoes">
+          <button id="btn-voltar" class="btn-outline theme-primary">Voltar</button>
+          <button id="btn-diagnosticar" class="btn-solid theme-primary">Diagnosticar</button>
+        </div>
+      </div>
+
+       <div id="resultado" hidden>
+          <h2>Resultado</h2>
+          <p id="resultado-texto"></p>
+          <button id="btn-novo" class="btn-solid theme-primary mt-3">Novo diagnóstico</button>
+        </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12 md:col-4">
+          <h5>Entre em contato conosco</h5>
+          <ul class="list-unstyled">
+            <li><a href="#contato">Instagram</a></li>
+          </ul>
+        </div>
+
+      </div> 
+
+      <hr>
+      <p class="text-center mb-1">
+        Este sistema apresenta indicações com base nos sintomas informados e não substitui a avaliação de um profissional.
+      </p>
+      <p class="text-center mb-0">&copy; 2026 MECAUTO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/diagnostico.js"></script>
+</body>
+</html>
